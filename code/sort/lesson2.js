@@ -16,3 +16,17 @@ export default (arr) => {
     }
     return arr
 }
+export default (arr)=>{
+    for(var i=0,min;i<arr.length;i++){
+      min=arr[i]
+      for(var j=i+1;j<arr.length;j++){
+          if(min>arr[j]){
+              let temp =min
+              min = arr[j]
+              arr[j]= temp
+          }
+      }
+      arr[i] = min
+    }
+    return arr
+}
